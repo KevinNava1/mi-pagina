@@ -156,8 +156,8 @@
     <section id="hobbies">
       <h2>Hobbies</h2>
       <div class="gallery">
-        <img src="https://via.placeholder.com/200x150/3498db/ffffff?text=Programación" alt="Programación">
-        <img src="https://via.placeholder.com/200x150/2ecc71/ffffff?text=Naturaleza" alt="Naturaleza">
+        <img src="{{ asset('imagenes/hobbie1.jpg')}}" alt="Futbol">
+        <img src="{{ asset('imagenes/hobbie2.jpeg')}}" alt="Naturaleza">
         <video controls>
           <source src="#" type="video/mp4">
           Tu navegador no soporta el video.

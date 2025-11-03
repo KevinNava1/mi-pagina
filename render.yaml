@@ -3,20 +3,24 @@ services:
     name: mi-pagina-personal
     env: php
     plan: free
+
     buildCommand: |
       composer install --no-dev --optimize-autoloader
+      php artisan key:generate
       php artisan config:cache
-      php artisan route:cache  
+      php artisan route:cache
       php artisan view:cache
-    startCommand: php artisan serve --host=0.0.0.0 --port=10000
+
+    startCommand: php artisan serve --host 0.0.0.0 --port 10000
+
     envVars:
       - key: APP_ENV
         value: production
-      - key: APP_DEBUG  
+      - key: APP_DEBUG
         value: false
-      - key: APP_KEY
-        value: base64:tu_clave_generada_aqui
       - key: APP_URL
         value: https://mi-pagina-personal.onrender.com
+      - key: APP_KEY
+        sync: false
       - key: DB_CONNECTION
         value: mysql

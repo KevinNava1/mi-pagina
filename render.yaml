@@ -1,7 +1,7 @@
 services:
   - type: web
     name: mi-pagina-personal
-    runtime: php
+    env: php
     plan: free
     buildCommand: |
       composer install --no-dev --optimize-autoloader
@@ -15,8 +15,8 @@ services:
       - key: APP_DEBUG  
         value: false
       - key: APP_KEY
-        value: base64:tu_clave_generada
+        value: base64:tu_clave_generada_aqui
       - key: APP_URL
-        value: https://mi-pagina-personal-v2.onrender.com
+        value: https://mi-pagina-personal.onrender.com
       - key: DB_CONNECTION
         value: mysql
